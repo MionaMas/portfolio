@@ -1,0 +1,201 @@
+* { margin: 0; }
+p, ul {
+  font-family: "Graphik", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+.mT {margin-top: 3em;}
+.mB {margin-bottom: 1em;}
+.pT {padding-top: 1em;}
+
+
+/* Pàgina inicio */
+body.homepage {
+  overflow-x: hidden;
+}
+body.homepage table {
+  max-width: 100%;
+  min-width: 100%;
+  border-spacing: 0;
+  background-image: url('../imatges/background.png');
+  background-size: cover;
+}
+body.homepage th { max-width: 100%; margin: 0; padding: 0; }
+body.homepage tr.menu th {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 3vw 4vw 0 3.6vw;
+}
+body.homepage tr.menu img {max-width: 4vw; height: 3vw;}
+
+h1 {
+  font-family: "Spectral", serif;
+  font-weight: 300;
+  color: white;
+  margin-bottom: -1vw;
+  font-size: 1.7em;
+  line-height: 1.4em;
+  overflow: hidden;
+  text-align: center;
+  margin: 3em 15vw 4vw 15vw;
+}
+h2 {
+  color: white;
+  font-family: "Spectral", serif;
+  font-weight: 100;
+  font-size: .9em;
+}
+.header th img { width: 75%; margin-bottom: 3vw;}
+.trioImatges th, .trioQuadrats th {
+  display: flex;
+  flex-direction: row;
+}
+.trioImatges img {
+  max-width: 33vw;
+  width: 33vw;
+  padding: 0;
+}
+
+.trioImatges img:hover { cursor: pointer; }
+img#firstVis, img#segonVis, img#tercerVis { display: block; }
+img#firstInvis, img#segonInvis, img#tercerInvis { display: none; }
+
+body.homepage .footer th {
+  color: white;
+  padding: 4em 0 3em 0;
+  font-weight: 200;
+  font-size: .8em;
+}
+.footer a { margin: 0 .3em 0 .3em; }
+.footer p { font-family: "Spectral", serif; }
+
+@media screen and (max-width: 500px) {
+    .homepage table tr.menu th { display: none; }
+    body.homepage table { background-image: none; background-color: #0D1019; }
+    .header th img { width: 100%; margin-bottom: 3vw;}
+}
+
+/* PÀGINES INTERIORS */
+/* Header */
+.PagInterior .headPrim th {
+  background-color: #0d1019;
+  padding: 1.5em 2em 1.5em 3em;
+  text-align: left;
+  color: #FFF156;
+}
+tr.headPrim a, tr.headPrima a:visited, tr.headPrima a:active {
+  font-family: "Spectral", serif;
+  margin-right: 2em;
+  margin-left: 2em;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 100;
+  color: #FFF156;
+}
+tr.headPrim a.logo { margin-right: 0em; margin-left: 0em;}
+.headPrim th img.icon {width: 1.5em;}
+.headPrim th a.logo img {width: 4em; margin-right: 3em;}
+
+@media screen and (max-width: 700px) {
+  tr.headPrim a { display: block; margin-left: 0; padding-bottom: .5em;}
+  tr.headPrim span {display: none;}
+}
+
+/* General */
+.PagInterior { background-color: #222844; }
+h3 {
+  font-family: "Graphik", serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.7em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+strong {color: #FFF156; }
+button {
+  background-color: #CC3366;
+  color: white;
+  border-radius: 2em;
+  padding: .8em 1.5em;
+  border: none;
+  margin-top: .5em;
+  text-decoration: none;
+}
+button a:visited, button a:active, button a:link { color: white; text-decoration: none; }
+p a:link, a:visited { color: white; }
+
+
+/* Taules + responsive */
+tr.contingutEdit th, tr.contingutEditInt th {
+  display: flex;
+  flex-direction: row;
+  padding: 3em 2em 2em 3em;
+  align-items: center;
+}
+.PagInterior div.columna1 {
+  text-align: left;
+  width: 35%;
+  padding-right: 3em;
+}
+.PagInterior div.columna2 { width: 65%; }
+.columna1 p { margin-bottom: .6em; }
+
+
+/* Specific to Editorial */
+tr.contingutEditInt div.columna1 {width: 45%; }
+tr.contingutEditInt  div.columna2 { width: 55%; }
+tr.contingutEditInt  div.columna2 img { width: 90%; }
+p.tiny a:link, a:visited { color: #FFF156; }
+
+.cobertesImatges { display: flex; flex-wrap: wrap; }
+.cobertesImatges img {
+  max-width: 6em;
+  margin-right: .5em;
+  margin-bottom: .5em;
+}
+
+@media screen and (max-width: 700px) {
+  tr.contingutEdit th, tr.contingutEditInt th { display: inline-block; padding-left: 2em; }
+  .PagInterior div.columna1, tr.contingutEditInt div.columna1  { width: 100%; text-align: center; padding-right: 0;}
+  .PagInterior div.columna2, tr.contingutEditInt  div.columna2  { width: 100%; margin-top: 2em; }
+}
+
+
+/* Specific to Gràfic */
+.contingutGraf h3 { margin-top: 1.5em;}
+.contingutGraf p {margin: 0 1em 1em 1em; }
+.dissenyWorks img { height: 50vw; padding: .5em .5em .5em .5em;}
+.dissenyWorks img.hei { width: 60vw; }
+.illustracio img { height: 20vw; padding: .5em .5em .5em .5em; }
+
+
+/* Specific to Web */
+.contingutWeb th {
+  display: flex;
+  flex-direction: row;
+  padding: 2em 2em 2em 1.5em;
+}
+.contingutWeb div.columna0 { width: 10%; }
+.columna0 img { width: 72%; margin-top: .5em; }
+.contingutWeb div.columna1 {
+  text-align: left;
+  width: 40%;
+  padding: 0 3em 0 2em;
+}
+.columna1 img { width: 7%; margin-top: 1.5em;}
+.contingutWeb span { color: #FFF156; margin-left: 1em;}
+
+.contingutWeb div.columna2 { width: 40%; align-self: center; }
+.contingutWeb div.columna2 img { width: 100%; }
+.contingutWeb div.columna2 p  { color: white; width: 83%; display: inline-block; margin-bottom: 1em;}
+
+@media screen and (max-width: 700px) {
+  .contingutWeb th {display: inline-block; }
+  .contingutWeb div.columna0 { width: 100%; }
+  .columna0 img { width: 20%; margin: 0 .2em 1.5em .2em; }
+  .contingutWeb div.columna1, .contingutWeb div.columna2 p { width: 100%; text-align: center; padding: 0;}
+  .columna1 img { display: none;}
+  .contingutWeb div.columna2 { width: 100%; margin-top: 2em; }
+}
